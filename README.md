@@ -1,10 +1,9 @@
 # Neovim Configs
 
-## Try out this config
+## Installing Config
 
 Make sure to remove or move your current `nvim` directory
 
-**IMPORTANT** Requires [Neovim v0.8.0]](https://github.com/neovim/neovim/releases).  [Upgrade](#upgrade-to-latest-release) if you're on an earlier version. 
 ```
 git clone git@github.com:TamerlanG/nvim-configs.git ~/.config/nvim
 ```
@@ -12,6 +11,12 @@ git clone git@github.com:TamerlanG/nvim-configs.git ~/.config/nvim
 Run `nvim` and wait for the plugins to be installed 
 
 **NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
+
+## If you have an M1 Chip 
+
+There seems to be a problem with the npm package tree sitter that it fails to install. 
+
+To fix it, check out this github [thread](https://github.com/claytonrcarter/tree-sitter-phpdoc/issues/15). 
 
 ## Get healthy
 
