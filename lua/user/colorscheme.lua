@@ -8,7 +8,6 @@ endtry
 ]]
 
 require("transparent").setup({
-  enable = true, -- boolean: enable transparent
   extra_groups = {
     "StatusLineNC",
     "StatusLine",
@@ -17,7 +16,7 @@ require("transparent").setup({
     "NvimTreeRootFolder",
     "NvimTreeNormalNC"
   },
-  exclude = {
+  exclude_groups = {
     "BufferLineTabClose",
     "BufferlineBufferSelected",
     "BufferLineFill",
