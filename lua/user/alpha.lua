@@ -19,16 +19,17 @@ dashboard.section.buttons.val = {
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
+  dashboard.button("z", "  Configure Zsh", ":e ~/.zshrc <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 
 local function footer()
 -- NOTE: requires the fortune-mod package to work
-	-- local handle = io.popen("fortune")
-	-- local fortune = handle:read("*a")
-	-- handle:close()
-	-- return fortune
-	return "tamerlan.dev"
+	local handle = io.popen("fortune")
+	local fortune = handle:read("*a")
+	handle:close()
+	return fortune
+	-- return "tamerlan.dev"
 end
 
 dashboard.section.footer.val = footer()
