@@ -78,7 +78,7 @@ return packer.startup(function(use)
 	use({ "rafamadriz/friendly-snippets", commit = "d27a83a363e61009278b6598703a763ce9c8e617" }) -- a bunch of snippets to use
 
 	-- LSP
-	use({ "neovim/nvim-lspconfig" }) -- enable LSP
+	use({ "neovim/nvim-lspconfig", commit = "255e07ce2a05627d482d2de77308bba51b90470c" }) -- enable LSP
 	use({ "williamboman/nvim-lsp-installer" }) 
 	use({ "jose-elias-alvarez/null-ls.nvim"}) -- for formatters and linters
 
@@ -86,9 +86,9 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" })
 
 	-- Treesitter
-	use({
-		"nvim-treesitter/nvim-treesitter",
-	})
+	 use({
+		 "nvim-treesitter/nvim-treesitter",
+	 })
   use("xiyaowong/nvim-transparent")
 
 	-- Git
