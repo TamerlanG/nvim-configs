@@ -60,6 +60,12 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
   use("christoomey/vim-tmux-navigator")
 
+  -- Markdown Preview
+  use({
+   "iamcco/markdown-preview.nvim",
+   run = function() vim.fn["mkdp#util#install"]() end,
+  }) 
+
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
 	use("lunarvim/darkplus.nvim")
