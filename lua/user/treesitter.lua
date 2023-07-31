@@ -1,3 +1,10 @@
+local vim = vim
+local opt = vim.opt
+
+opt.foldenable = false
+opt.foldmethod = "expr"
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
 	return
