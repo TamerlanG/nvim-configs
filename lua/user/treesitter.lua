@@ -11,7 +11,7 @@ if not status_ok then
 end
 
 configs.setup({
-	ensure_installed = "all", -- one of "all" or a list of languages
+	ensure_installed = {"lua", "typescript"}, -- one of "all" or a list of languages
 	ignore_install = { "" }, -- List of parsers to ignore installing
 	highlight = {
 		enable = true, -- false will disable the whole extension

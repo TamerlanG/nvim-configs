@@ -1,16 +1,26 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not status_ok then
-  return
-end
+require("mason").setup()
+require("mason-lspconfig").setup()
 
-local lspconfig = require("lspconfig")
+lspconfig = require("lspconfig")
 
-
-local servers = { "jsonls", "sumneko_lua", "gopls", "tsserver", "ccls", "clangd", "pyright", "html", "tailwindcss",
-  "emmet_ls", "dockerls", "bashls" }
+lsp_installer = require("mason-lspconfig")
+local servers = {
+	"jsonls",
+	"sumneko_lua",
+	"gopls",
+	"tsserver",
+	"ccls",
+	"clangd",
+	"pyright",
+	"html",
+	"tailwindcss",
+	"emmet_ls",
+	"dockerls",
+	"bashls",
+}
 
 lsp_installer.setup({
-  ensure_installed = servers,
+	ensure_installed = servers,
 })
 
 for _, server in pairs(servers) do
