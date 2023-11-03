@@ -6,10 +6,9 @@ lspconfig = require("lspconfig")
 lsp_installer = require("mason-lspconfig")
 local servers = {
 	"jsonls",
-	"sumneko_lua",
+	"lua_ls",
 	"gopls",
 	"tsserver",
-	"ccls",
 	"clangd",
 	"pyright",
 	"html",
