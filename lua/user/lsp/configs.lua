@@ -4,19 +4,19 @@ require("mason-lspconfig").setup()
 lspconfig = require("lspconfig")
 
 lsp_installer = require("mason-lspconfig")
+
 local servers = {
 	"jsonls",
 	"sumneko_lua",
 	"gopls",
 	"tsserver",
-	"ccls",
-	"clangd",
 	"pyright",
 	"html",
 	"tailwindcss",
 	"emmet_ls",
 	"dockerls",
 	"bashls",
+  "yamlls"
 }
 
 lsp_installer.setup({
