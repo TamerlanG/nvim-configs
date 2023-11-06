@@ -67,7 +67,7 @@ local plugins = {
   "zbirenbaum/copilot.lua",
 
   -- Telescope
-  { "nvim-telescope/telescope.nvim", commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0" },
+  "nvim-telescope/telescope.nvim",
 
   -- Treesitter	
   "nvim-treesitter/nvim-treesitter",
