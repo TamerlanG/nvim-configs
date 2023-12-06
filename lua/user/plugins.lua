@@ -74,6 +74,10 @@ local plugins = {
   "xiyaowong/nvim-transparent",
   -- Git
   { "lewis6991/gitsigns.nvim",       commit = "fef5d90953f0a730483b44745fae5938ba8227f8" },
+
+  -- Gen AI 
+  { "David-Kunz/gen.nvim" },
+
 }
 
 require("lazy").setup(plugins, {})
