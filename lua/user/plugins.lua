@@ -14,6 +14,25 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+	-- LSP
+	"williamboman/mason.nvim",
+	"williamboman/mason-lspconfig.nvim",
+	"neovim/nvim-lspconfig",
+	"jose-elias-alvarez/null-ls.nvim",
+	"mfussenegger/nvim-dap",
+	"rcarriga/nvim-dap-ui",
+	"zbirenbaum/copilot.lua",
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
+	},
+	{ "elentok/format-on-save.nvim" },
+
 	{ "nvim-lua/plenary.nvim", commit = "968a4b9afec0c633bc369662e78f8c5db0eba249" },
 	{ "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" },
 	{ "numToStr/Comment.nvim", commit = "2c26a00f32b190390b664e56e32fd5347613b9e2" },
@@ -58,40 +77,20 @@ local plugins = {
 	{ "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" }, --snippet engine
 	{ "rafamadriz/friendly-snippets", commit = "d27a83a363e61009278b6598703a763ce9c8e617" }, -- a bunch of snippets to use
 
-	-- LSP
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
-	"jose-elias-alvarez/null-ls.nvim",
-	"mfussenegger/nvim-dap",
-	"rcarriga/nvim-dap-ui",
-	"zbirenbaum/copilot.lua",
-	{
-		"folke/trouble.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
-		},
-	},
-  { "elentok/format-on-save.nvim" },
+	-- Telescope
+	"nvim-telescope/telescope.nvim",
 
 	-- Telescope
 	"nvim-telescope/telescope.nvim",
 
-  -- Telescope
-  "nvim-telescope/telescope.nvim",
+	-- Treesitter
+	"nvim-treesitter/nvim-treesitter",
+	"xiyaowong/nvim-transparent",
+	-- Git
+	{ "lewis6991/gitsigns.nvim", commit = "fef5d90953f0a730483b44745fae5938ba8227f8" },
 
-  -- Treesitter	
-  "nvim-treesitter/nvim-treesitter",
-  "xiyaowong/nvim-transparent",
-  -- Git
-  { "lewis6991/gitsigns.nvim",       commit = "fef5d90953f0a730483b44745fae5938ba8227f8" },
-
-  -- Gen AI 
-  { "David-Kunz/gen.nvim" },
-
+	-- Gen AI
+	{ "David-Kunz/gen.nvim" },
 }
 
 require("lazy").setup(plugins, {})
