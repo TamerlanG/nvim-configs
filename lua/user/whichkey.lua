@@ -100,20 +100,7 @@ local mappings = {
 		m = { "<cmd>MarkdownPreview<CR>", "Preview Markdown" },
 		q = { "<cmd>MarkdownPreviewStop<CR>", "Stop Preview" },
 		t = { "<cmd>MarkdownPreviewToggle<CR>", "Toggle Preview" },
-	},
-	n = {
-		name = "Generative AI",
-		v = { "<cmd>:Gen<CR>", "Generate" },
-	},
-	p = {
-		name = "Packer",
-		c = { "<cmd>PackerCompile<cr>", "Compile" },
-		i = { "<cmd>PackerInstall<cr>", "Install" },
-		s = { "<cmd>PackerSync<cr>", "Sync" },
-		S = { "<cmd>PackerStatus<cr>", "Status" },
-		u = { "<cmd>PackerUpdate<cr>", "Update" },
-	},
-
+  },
 	g = {
 		name = "Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -136,6 +123,10 @@ local mappings = {
 			"Diff",
 		},
 	},
+  p = {
+    name = "Lazy",
+    i = { "<cmd>Lazy<cr>", "Lazy" },
+  },
 
 	l = {
 		name = "LSP",
@@ -150,7 +141,7 @@ local mappings = {
 		},
 		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
-		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+		I = { "<cmd>Mason<cr>", "Installer Info" },
 		j = {
 			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
 			"Next Diagnostic",
