@@ -50,6 +50,12 @@ local plugins = {
 	{ "hrsh7th/cmp-cmdline" },
 	{ "saadparwaiz1/cmp_luasnip" }, -- snippet completions
 	{ "hrsh7th/cmp-nvim-lua" },
+	{
+		"zbirenbaum/copilot-cmp",
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	},
 
 	-- Snippets
 	{ "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" }, --snippet engine
