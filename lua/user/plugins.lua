@@ -68,7 +68,12 @@ local plugins = {
 	"jose-elias-alvarez/null-ls.nvim",
 	"mfussenegger/nvim-dap",
 	"rcarriga/nvim-dap-ui",
-	"zbirenbaum/copilot.lua",
+	{
+
+		"zbirenbaum/copilot.lua",
+		cmd = "Copilot",
+		event = "InsertEnter",
+	},
 	{
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -89,6 +94,7 @@ local plugins = {
 			})
 		end,
 	},
+	{ "folke/neodev.nvim", opts = {} },
 	-- Telescope
 	"nvim-telescope/telescope.nvim",
 
