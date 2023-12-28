@@ -90,7 +90,7 @@ local mappings = {
 	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["f"] = {
-		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+		"<cmd>lua require('telescope.builtin').find_files(require('telescope.themes', {hidden = true}).get_dropdown{previewer = false})<cr>",
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
@@ -100,7 +100,7 @@ local mappings = {
 		m = { "<cmd>MarkdownPreview<CR>", "Preview Markdown" },
 		q = { "<cmd>MarkdownPreviewStop<CR>", "Stop Preview" },
 		t = { "<cmd>MarkdownPreviewToggle<CR>", "Toggle Preview" },
-  },
+	},
 	g = {
 		name = "Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -123,10 +123,10 @@ local mappings = {
 			"Diff",
 		},
 	},
-  p = {
-    name = "Lazy",
-    i = { "<cmd>Lazy<cr>", "Lazy" },
-  },
+	p = {
+		name = "Lazy",
+		i = { "<cmd>Lazy<cr>", "Lazy" },
+	},
 
 	l = {
 		name = "LSP",

@@ -69,7 +69,6 @@ local plugins = {
 	"mfussenegger/nvim-dap",
 	"rcarriga/nvim-dap-ui",
 	{
-
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
 		event = "InsertEnter",
@@ -109,6 +108,10 @@ local plugins = {
 
 	-- Telescope
 	"nvim-telescope/telescope.nvim",
+	{
+		"nvim-telescope/telescope-fzf-native.nvim",
+		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	},
 
 	-- Treesitter
 	"nvim-treesitter/nvim-treesitter",
