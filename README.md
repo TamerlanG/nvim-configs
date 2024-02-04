@@ -1,4 +1,6 @@
-# Neovim Configs
+# Neovim Configs [Deprecated]
+
+Go to https://github.com/TamerlanG/dotfiles
 
 ## Installing Config
 
